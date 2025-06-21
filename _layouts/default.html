@@ -1,0 +1,964 @@
+<html lang="en" data-bs-theme="auto"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- <script src="./assets/js/color-modes.js"></script> -->
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.111.3">
+  <title>AI for Data Editing</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <!-- <link href="./AI for Urban Planning_files/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+
+
+  <!-- Custom styles for this template -->
+  <!-- <link href="./AI for Urban Planning_files/carousel.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="{{ '/assets/css/carousel.css' | relative_url }}">
+
+<!-- <script type="text/javascript" src="./AI for Urban Planning_files/jquery.min.js.download"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script></head> -->
+<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+
+
+
+<body data-new-gr-c-s-check-loaded="14.1228.0" data-gr-ext-installed="">
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+    </symbol>
+  </svg>
+
+
+  
+<header data-bs-theme="dark">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="https://ai-for-data-editing.github.io/KDD25-workshop/#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="https://ai-for-data-editing.github.io/KDD25-workshop/#agenda">Agenda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="https://ai-for-data-editing.github.io/KDD25-workshop/#pics">Photos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="https://ai-for-data-editing.github.io/KDD25-workshop/#posters">Posters</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="https://ai-for-data-editing.github.io/KDD25-workshop/#topics">Topics of Interest</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#submission">Submission Details</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="https://ai-for-data-editing.github.io/KDD25-workshop/#date">Important Dates</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="https://ai-for-data-editing.github.io/KDD25-workshop/#organizer">Organizing Committee</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="https://ai-for-data-editing.github.io/KDD25-workshop/#student_volunteer">Volunteers</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<div class="carousel-container" style="max-width: 100%; overflow: hidden;">
+  <div class="d-flex justify-content-center align-items-center" style="height: 60vh; position: relative; overflow: hidden;">
+      <img src="./assets/images/4k-toronto-skyline-background-photo.jpg" alt="Toronto Skyline" style="width: 100%; height: auto; object-fit: cover; ">
+      <div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+          <div class="carousel-caption text-center">
+              <h1 style="text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);">AI4DE: The 1st International Workshop on AI for Data Editing</h1>
+              <p style="text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);">
+                  KDD 2025's Workshop<br>
+                  <!--August 6th, 2025 | Toronto, ON, Canada | Room TBD-->
+                  8:00 AM - 12:00 PM | Sunday, August 3, 2025 | Toronto, ON, Canada 
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+  <!-- 空白部分 -->
+  <div style="margin-top: 60px;"></div> <!-- 调整这个值来控制空白的高度 -->
+
+  <!-- START THE FEATURETTES -->
+  <h1 id="home">Home</h1>
+  <div class="row featurette">
+    <div class="col-md-12">
+      <p class="lead" style="margin-top: 30px;">
+        The 1st Workshop on AI for Data Editing aims to bring together researchers, practitioners, 
+        and policymakers to explore innovative AI-driven solutions for the multifaceted challenges 
+        in data editing. As data grows exponentially, there is an urgent demand for advanced 
+        strategies in data preprocessing, cleaning, transformation, quality control, as well as 
+        better understanding of complex interdependencies in large-scale data workflows. This 
+        workshop will delve into the latest AI technologies to facilitate efficient, accurate, and 
+        human-centric data editing processes.
+      </p>
+      <p class="lead" style="margin-top: 20px;">
+        The workshop is held in conjunction with the 31th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD-2025),
+        one of the world's premier conferences in data science, data mining, and big data analytics. Organized by ACM SIGKDD,
+        KDD is a key platform where researchers, practitioners, and industry experts present groundbreaking advancements and
+        explore emerging trends in data mining, machine learning, and AI. This partnership provides the workshop with a vital
+        forum for interdisciplinary knowledge exchange, fostering collaboration among data scientists, domain experts,
+        and policymakers.
+      </p>
+    </div>
+
+  </div>
+
+<hr class="featurette-divider" style="margin: 60px 0;">
+
+<!-- Home Section 结束后 -->
+<!--
+<hr class="featurette-divider" style="margin: 60px 0;">
+-->
+<!-- 新增纯文字 Section -->
+<h1 id="about" style="margin-top: 60px;">Submission Guidelines</h1>
+<div class="row featurette">
+  <div class="col-md-12">
+    <p class="lead" style="margin-top: 30px;">
+      We invite the submission of regular research papers, which cannot exceed 9 pages, including an appendix, plus unlimited references 
+      (paper content is limited to 9 pages, that means that if you have an appendix, 
+      then it should be included within that page limit. It is also ok if you do not have an appendix and instead 9 pages of content). 
+      Submissions must be in PDF format, and formatted according to the new Standard ACM sigconf template. 
+      Submitted papers will be assessed based on their novelty, technical quality, potential impact, insightfulness, depth, clarity, 
+      and reproducibility. All the papers are required to be submitted via the easychair system.
+    </p>
+    
+    <p class="lead" style="margin-top: 20px;">
+      <!--Submission Link: <a href="https://easychair.org/conferences?conf=ai4de">https://easychair.org/conferences?conf=ai4de</a>-->
+      We invite authors to submit their papers via the EasyChair submission portal: 
+      <a href="https://easychair.org/conferences?conf=ai4de" target="_blank" rel="noopener">
+        https://easychair.org/conferences?conf=ai4de
+      </a>
+    </p>
+  </div>
+</div>
+
+<hr class="featurette-divider" style="margin: 60px 0;">
+
+
+
+<!--
+  <hr class="featurette-divider" style="margin: 60px 0;">
+-->
+
+  <h1 id="agenda">Agenda</h1>
+<div class="col-lg-12" style="margin-top: 60px;">
+ <p class="lead" style="margin-top: 30px;">
+  The workshop will follow a half-day format, focusing on paper presentations, poster sessions, keynote and invited talks. We anticipate attracting a minimum of 75 and potentially up to 100 attendees. People who have been accepted to give paper presentations, posters are invited to attend. In addition, the workshop is open to researchers, industry professionals, and policymakers interested in AI applications for urban planning. Due to venue capacity, attendance may be limited.
+</p> 
+
+
+<div>
+<table border="1" style="width: 100%; border-collapse: collapse; text-align: left; border-width: 1px;">
+    <thead>
+        <tr>
+            <th colspan="3" style="border-width: 1px; text-align: center;">August 3, 2025 (Location: Room TBD)</th>
+        </tr>
+        <tr>
+            <th style="border-width: 1px;">Time</th>
+            <th style="border-width: 1px;">Event</th>
+            <th style="border-width: 1px;">Speaker</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="border-width: 1px;">08:50-09:00</td>
+            <td style="border-width: 1px;">Open Remarks</td>
+            <td style="border-width: 1px;">Organizers</td>
+        </tr>
+        <!--
+        <tr>
+            <td style="border-width: 1px;">09:00-09:30</td>
+            <td style="border-width: 1px;">Keynote 1: AI as Co-Creator: Planners and Communities Shaping Tomorrow's Cities</td>
+            <td style="border-width: 1px;">Zhongren Peng (University of Florida)</td>
+        </tr>
+       -->
+
+       <!--
+        <tr>
+            <td style="border-width: 1px;">10:00-10:20</td>
+            <td style="border-width: 1px;">Poster Session 1</td>
+            <td style="border-width: 1px;"></td>
+        </tr>
+
+        -->
+
+        <!--
+        <tr>
+            <td style="border-width: 1px;">10:20-10:30</td>
+            <td style="border-width: 1px;">Paper Presentation 1: Integrating Human Dynamics into AI-Driven GeoDesign for Sustainable Urban Futures <a href="https://ai-for-urban-planning.github.io/AAAI25-workshop/assets/slides/Ye-AAAI25.pdf" download="">(Slides)</a></td>
+            <td style="border-width: 1px;">Xinyue Ye (Texas A&amp;M)</td>
+        </tr>
+        -->
+
+        <!--
+        <tr>
+            <td style="border-width: 1px;">10:30-10:40</td>
+            <td style="border-width: 1px;">Paper Presentation 2: Mining E-scooter Safety Policies and Plans with GPT-4o and Latent Dirichlet Allocation (LDA) Topic Modeling <a href="https://ai-for-urban-planning.github.io/AAAI25-workshop/assets/slides/zhangm_austin.utexas.edu%20AI4UP2025ZhangMingEscooterSafetyTopicModeling.pdf" download="">(Slides)</a></td>
+            <td style="border-width: 1px;">Ming Zhang (UT Austin)</td>
+        </tr>
+        -->
+
+        <!--
+        <tr>
+            <td style="border-width: 1px;">10:40-10:50</td>
+            <td style="border-width: 1px;">Paper Presentation 3: Exploring Commuting Inequalities through Inferential Machine Learning; Lessons for Spatial Mismatch Hypothesis <a href="https://ai-for-urban-planning.github.io/AAAI25-workshop/assets/slides/qisheng.pan_uta.edu%20AI4UP_Presentation-Final.pdf" download="">(Slides)</a></td>
+            <td style="border-width: 1px;">Qisheng Pan (UT Arlington)</td>
+        </tr>
+         -->
+
+        <!--
+        <tr>
+            <td style="border-width: 1px;">11:20-11:40</td>
+            <td style="border-width: 1px;">Poster Session 2</td>
+            <td style="border-width: 1px;"></td>
+        </tr>
+        -->
+        <tr>
+            <td style="border-width: 1px;">TBD</td>
+            <td style="border-width: 1px;">Panel Discussion</td>
+            <td style="border-width: 1px;">Xiong Hui(HKUST)</td>
+        </tr>
+        <tr>
+            <td style="border-width: 1px;">TBD</td>
+            <td style="border-width: 1px;">Closing Remarks</td>
+            <td style="border-width: 1px;">Organizers</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+
+<hr class="featurette-divider" style="margin: 60px 0;">
+
+<!--
+<h1 id="pics" style="text-align: left;">Photos</h1>
+
+<div id="photoCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div class="carousel-indicators">
+
+  <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+  <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+  <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+  <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+  <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="4" aria-label="Slide 5" class=""></button>
+  <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="5" aria-label="Slide 6" class=""></button>
+  <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="6" aria-label="Slide 7" class=""></button>
+  <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="7" aria-label="Slide 8" class=""></button>
+  <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="8" aria-label="Slide 9" class=""></button>
+  <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="9" aria-label="Slide 10" class=""></button>
+  <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="10" aria-label="Slide 11" class=""></button>
+</div>
+
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <div class="carousel-img-container">
+      <img src="./assets/images/1.jpeg" class="photo-image" alt="Photo 1" data-img="./assets/images/1.jpeg">
+    </div>
+  </div>
+  <div class="carousel-item">
+    <div class="carousel-img-container">
+      <img src="./assets/images/2.jpeg" class="photo-image" alt="Photo 2" data-img="./assets/images/2.jpeg">
+    </div>
+  </div>
+  <div class="carousel-item">
+    <div class="carousel-img-container">
+      <img src="./assets/images/3.jpeg" class="photo-image" alt="Photo 3" data-img="./assets/images/3.jpeg">
+    </div>
+  </div>
+  <div class="carousel-item">
+    <div class="carousel-img-container">
+      <img src="./assets/images/4.jpeg" class="photo-image" alt="Photo 4" data-img="./assets/images/4.jpeg">
+    </div>
+  </div>
+  <div class="carousel-item">
+    <div class="carousel-img-container">
+      <img src="./assets/images/5.jpeg" class="photo-image" alt="Photo 5" data-img="./assets/images/5.jpeg">
+    </div>
+  </div>
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+
+
+<div class="modal fade" id="imageModal" tabindex="-1" data-bs-backdrop="static">
+<div class="modal-dialog modal-dialog-centered modal-xl">
+  <div class="modal-content bg-transparent border-0">
+    <div class="modal-body d-flex justify-content-center align-items-center">
+
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <img id="fullScreenImage" class="img-fluid shadow-lg" style="max-height: 90vh; cursor: zoom-out;" alt="Full Screen Poster">
+    </div>
+  </div>
+</div>
+</div>
+-->
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const modalElement = document.getElementById('imageModal');
+  const modalInstance = new bootstrap.Modal(modalElement);
+  
+  // 绑定图片点击事件，显示模态框
+  document.querySelectorAll('.poster-image').forEach(img => {
+    img.addEventListener('click', function () {
+      document.getElementById('fullScreenImage').src = this.getAttribute('data-img');
+      modalInstance.show();
+    });
+  });
+
+  // 关闭按钮点击时，关闭模态框
+  document.querySelector('.btn-close').addEventListener('click', function () {
+    modalInstance.hide();
+  });
+
+  // 点击图片本身时关闭模态框
+  document.getElementById('fullScreenImage').addEventListener('click', function () {
+    modalInstance.hide();
+  });
+
+  // 点击模态框的背景时关闭模态框
+  modalElement.addEventListener('click', function (event) {
+    if (event.target === modalElement) {
+      modalInstance.hide();
+    }
+  });
+});
+</script>
+<!-- Modal for Full-Screen Image -->
+<div class="modal fade" id="photoModal" tabindex="-1">
+<div class="modal-dialog modal-fullscreen">
+  <div class="modal-content">
+    <div class="modal-body">
+      <img id="fullScreenPhoto" class="img-fluid" src="https://ai-for-data-editing.github.io/KDD25-workshop/" alt="Full Photo">
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.photo-image').forEach(img => {
+  img.addEventListener('click', function () {
+    document.getElementById('fullScreenPhoto').src = this.getAttribute('data-img');
+    new bootstrap.Modal(document.getElementById('photoModal')).show();
+  });
+});
+</script>
+
+
+<!-- 
+<hr class="featurette-divider" style="margin: 60px 0;">
+-->
+
+<!-- Bootstrap 5 -->
+<!-- <script src="./AI for Urban Planning_files/bootstrap.bundle.min.js.download"></script> -->
+<script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+
+<!--
+<h1 id="posters" style="text-align: left;">Posters</h1>
+
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div class="carousel-indicators">
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5" class=""></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6" class=""></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7" class=""></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8" class="active" aria-current="true"></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9" class=""></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10" class=""></button>
+</div>
+<div class="carousel-inner">
+  <div class="carousel-item" data-bs-interval="10000">
+    <div class="carousel-img-container">
+      <img src="./assets/images/poster1.png" class="poster-image" alt="Poster 1" data-img="./assets/images/poster1.png">
+    </div>
+  </div>
+  <div class="carousel-item" data-bs-interval="2000">
+    <div class="carousel-img-container">
+      <img src="./assets/images/poster2.png" class="poster-image" alt="Poster 2" data-img="./assets/images/poster2.png">
+    </div>
+  </div>
+  <div class="carousel-item active">
+    <div class="carousel-img-container">
+      <img src="./assets/images/poster3.png" class="poster-image" alt="Poster 3" data-img="./assets/images/poster3.png">
+    </div>
+  </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+-->
+
+<!--
+<hr class="featurette-divider" style="margin: 60px 0;">
+-->
+
+<h1 id="topics" style="text-align: left;">Topics of Interest</h1>
+<div class="row featurette">
+<div class="col-md-12">
+  <p class="lead" style="text-align: left; margin-top: 30px;">We encourage submissions on a broad range of topics related to AI for data editing, including but not limited to:</p>
+
+  <ul class="list-group" style="text-align: left;">
+    <li class="list-group-item list-group-item-primary"><b>Methods for automated data science</b>
+      <ul class="list-group list-group-numbered">
+        <li class="list-group-item">Automated data cleaning, denoising, interpolation, refinery and quality improvement</li>
+        <li class="list-group-item">Automated feature selection, generation, and feature-instance joint selection</li>
+        <li class="list-group-item">Automated data representation learning or reconstruction</li>
+        <li class="list-group-item">Automated outlier detection and removal</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <ul class="list-group" style="margin-top: 16px; text-align: left;">
+    <li class="list-group-item list-group-item-success"><b>New datasets in domain application areas</b>
+      <ul class="list-group list-group-numbered">
+        <li class="list-group-item">in speech, vision, manufacturing, smart cities, transportationmobile computing, 
+          sensing, medical, recommendation, personalization, science domain</li>
+        <!--<li class="list-group-item">Human-robot/AI interactions</li> -->
+        <!--<li class="list-group-item"></li>-->
+      </ul>
+    </li>
+  </ul>
+  
+  
+  
+  <ul class="list-group" style="margin-top: 16px; text-align: left;">
+    <li class="list-group-item list-group-item-danger"><b>Tools and methodologies for accelerating open-source dataset
+      preparation and iteration</b>
+      <ul class="list-group list-group-numbered">
+        <li class="list-group-item">Tools that quantify and accelerate time to source and prepare high-quality data</li>
+        <li class="list-group-item">Tools that ensure that the data is labeled consistently, such as label consensus</li>
+        <li class="list-group-item">Tools that make improving data quality more systematic</li>
+        <li class="list-group-item">Tools that automate the creation of high-quality supervised learning training data from low-quality resources,
+          such as forced alignment in speech recognition</li>
+        <li class="list-group-item">Tools that produce consistent and low noise data samples,or remove labeling noise or inconsistencies 
+          from existing data</li>
+        <li class="list-group-item">Tools for controlling what goes into the dataset and for
+          making high-level edits efficiently to very large datasets,
+          e.g. adding new words, languages, or accents to speech
+          datasets with thousands of hours</li>
+        <li class="list-group-item">Search methods for finding suitably licensed datasets based
+          on public resources</li>
+        <li class="list-group-item">Tools for creating training datasets for small data problems,
+          or for rare classes in the long tail of big data problems</li>
+        <li class="list-group-item">Tools for timely incorporation of feedback from production systems into datasets</li>
+        <li class="list-group-item">Tools for understanding dataset coverage of important
+          classes, and editing them to cover newly identified important cases</li>
+        <li class="list-group-item">Dataset importers that allow easy combination and composition of existing datasets</li>
+        <li class="list-group-item">Dataset exporters that make the data consumable for models and interface with model training and inference systems such as webdataset.</li>
+        <li class="list-group-item">System architectures and interfaces that enable composition of dataset tools such as MLCube, Docker, Airflow</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <ul class="list-group" style="margin-top: 16px; text-align: left;">
+    <li class="list-group-item list-group-item-info"><b>Algorithms for working with limited labeled data and improving label efficiency:</b>
+      <ul class="list-group list-group-numbered">
+        <li class="list-group-item">Data selection techniques such as active learning and coreset selection for identifying the most valuable examples
+          to label.</li>
+        <li class="list-group-item">Semi-supervised learning, few-shot learning, and weak
+          supervision methods for maximizing the power of limited
+          labeled data.</li>
+        <li class="list-group-item">Transfer learning and self-supervised learning approaches
+          for developing powerful representations that can be used
+          for many downstream tasks with limited labeled data</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <ul class="list-group" style="margin-top: 16px; text-align: left;">
+    <li class="list-group-item list-group-item-secondary"><b>Algorithms for working with shifted, drifted, out-of-distribution
+      data</b>
+      <ul class="list-group list-group-numbered">
+        <li class="list-group-item">New datasets for bias evaluation and analysis</li>
+        <li class="list-group-item">New algorithms for fixing shifted, drifted, OOD data</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <ul class="list-group" style="margin-top: 16px; text-align: left;">
+    <li class="list-group-item list-group-item-dark"><b>Algorithms for working with biased data</b>
+      <ul class="list-group list-group-numbered">
+        <li class="list-group-item">New datasets for bias evaluation and analysis</li>
+        <li class="list-group-item">New algorithms for automated elimination of bias in data</li>
+        <li class="list-group-item">New algorithms for model training with biased data</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</div>
+
+
+<!-- <hr class="featurette-divider" style="margin: 60px; text-align: left;">
+
+<h1 id="submission" style="text-align: left;">Submission Details</h1>
+<p class="lead" style="margin-top: 30px; text-align: left;">We welcome full-length papers, work-in-progress, extended abstracts, and position papers. Papers should be submitted in the AAAI format. Papers previously submitted to other journals or conferences are welcome. We accept both short papers (no more than 4 pages) and long papers (no more than 8 pages). Each submission will undergo a double-blind peer-review process. Papers accepted by the workshop will not be published but only for demonstration in the workshop.</p>
+  <p class="lead" style="margin-top: 30px; text-align: left;">
+    The workshop uses EasyChair for paper submission and review. 
+    <a href="https://urldefense.proofpoint.com/v2/url?u=https-3A__easychair.org_conferences_-3Fconf-3Dai4up&d=DwIDaQ&c=KXXihdR8fRNGFkKiMQzstpt6drHDqSenG-8Qi3URQqo&r=dqOCds4_f2zlVi6Xdwtrktbt-Pqh2embh69jsy91Jtw&m=m89fv66iSAlJEXJh8veoLm5Mhoy7bblTz0w1sKJ_IroNH4LfITnoUdLKqoPNKDze&s=ba3W6wB0YgEJ2Bh8jwAi9GwdI_fYjD-tHyaXMd7M-iA&e=" target="_blank" style="color: #007bff; text-decoration: underline;">
+        Submit your paper here
+    </a>.
+</p> -->
+
+
+
+
+<hr class="featurette-divider" style="margin: 60px 0;">
+
+  
+<h1 id="date" style="text-align: left;">Important Dates</h1>
+
+<div class="col-md-12" style="margin-top: 30px;">
+<table class="table" style="width: 100%; text-align: left; border-color: #ccc; font-size: 20px;">
+  <tbody>
+    <tr>
+      <td style="width: 60%; border: 1px solid #ccc; vertical-align: middle;">Workshop Call for Papers</td>
+      <td style="border: 1px solid #ccc; vertical-align: middle;">April 19, 2025</td>
+    </tr>
+    <tr>
+      <td style="width: 60%; border: 1px solid #ccc; vertical-align: middle;">Workshop Paper Submission</td>
+      <td style="border: 1px solid #ccc; vertical-align: middle;">
+        <del>May 8, 2025</del> May 31, 2025
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 60%; border: 1px solid #ccc; vertical-align: middle;">Notification of Workshop Papers Acceptance</td>
+      <td style="border: 1px solid #ccc; vertical-align: middle;">
+        <del>June 8, 2025</del> June 25, 2025
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 60%; border: 1px solid #ccc; vertical-align: middle;">Workshop Date</td>
+      <td style="border: 1px solid #ccc; vertical-align: middle;">August 3, 2025</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<hr class="featurette-divider" style="margin: 60px 0;">
+
+<h1 id="organizer" style="text-align: left;">Panel Discussion Speaker</h1>
+
+<div style="display: flex; flex-direction: row; background-color: #888; color: white; padding: 20px; margin-bottom: 8px; font-size: 18px; border-radius: 8px;">
+  <!-- Speaker Info -->
+
+  <img src="./assets/images/Huixiong.jpg"
+       style="width:140px;height:140px;border-radius:50%;
+              object-fit:cover;margin-right:24px;flex-shrink:0;">
+
+  <div style="flex: 2;">
+    <h2 style="color: white; margin-top: 0;">Hui Xiong</h2>
+    <p style="color: #bbb;"><em>Hong Kong University of Science and Technology (Guangzhou), xionghui@hkust-gz.edu.cn</em></p>
+  </div>
+
+</div>
+
+<hr class="featurette-divider" style="margin: 60px 0;">
+
+<h1 id="organizer" style="text-align: left;">Keynote Speaker</h1>
+
+<div style="display: flex; flex-direction: row; background-color: #666; color: white; padding: 20px; margin-bottom: 8px; font-size: 18px; border-radius: 8px;">
+  <!-- Speaker Info -->
+
+  <img src="./assets/images/Huanliu.jpg"
+       style="width:140px;height:140px;border-radius:50%;
+              object-fit:cover;margin-right:24px;flex-shrink:0;">
+
+  <div style="flex: 2;">
+    <h2 style="color: white; margin-top: 0;">Huan Liu</h2>
+    <p style="color: #bbb;"><em>Arizona State University, huanliu@asu.edu</em></p>
+  </div>
+
+
+
+  <!-- Speaking Topics and Fee -->
+  <div style="flex: 1;">
+    <p><strong>Speaking Topics</strong></p>
+    <ul style="list-style: none; padding-left: 0; color: #ffb321;">
+      <!--<li>Adversity</li> -->
+      <li>Artificial Intelligence (AI)</li>
+      <!--<li>Business</li> -->
+    </ul>
+  </div>
+
+  <!-- Fee -->
+  <div style="flex: 1;">
+    <p><strong>Speaker's Notes</strong></p>
+    <p style="color: #ffb321;">TBD</p>
+  </div>
+</div>
+
+<div style="display: flex; flex-direction: row; background-color: #666; color: white; padding: 20px; margin-bottom: 8px; font-size: 18px; border-radius: 8px;">
+  <!-- Speaker Info -->
+
+  <img src="./assets/images/Sebastianschelter.jpg"
+       style="width:140px;height:140px;border-radius:50%;
+              object-fit:cover;margin-right:24px;flex-shrink:0;">
+
+  <div style="flex: 2;">
+    <h2 style="color: white; margin-top: 0;">Sebastian Schelter</h2>
+    <p style="color: #bbb;"><em>BIFOLD & Technische Universität Berlin,<br>schelter@tu-berlin.de</em></p>
+  </div>
+
+
+
+  <!-- Speaking Topics and Fee -->
+  <div style="flex: 1;">
+    <p><strong>Speaking Topics</strong></p>
+    <ul style="list-style: none; padding-left: 0; color: #ffb321;">
+      <!--<li>Adversity</li> -->
+      <li>Artificial Intelligence (AI)</li>
+      <!--<li>Business</li> -->
+    </ul>
+  </div>
+
+  <!-- Fee -->
+  <div style="flex: 1;">
+    <p><strong>Speaker's Notes</strong></p>
+    <p style="color: #ffb321;">TBD</p>
+  </div>
+</div>
+
+<div style="display: flex; flex-direction: row; background-color: #666; color: white; padding: 20px; margin-bottom: 8px; font-size: 18px; border-radius: 8px;">
+  <!-- Speaker Info -->
+  
+  <img src="./assets/images/suzanneshontz.jpg"
+       style="width:140px;height:140px;border-radius:50%;
+              object-fit:cover;object-position: 50% 20%;margin-right:24px;flex-shrink:0;">
+
+  <div style="flex: 2;">
+    <h2 style="color: white; margin-top: 0;">Suzanne M. Shontz</h2>
+    <p style="color: #bbb;"><em>University of Kansas, shontz@ku.edu</em></p>
+  </div>
+
+  <!-- Speaking Topics and Fee -->
+  <div style="flex: 1;">
+    <p><strong>Speaking Topics</strong></p>
+    <ul style="list-style: none; padding-left: 0; color: #ffb321;">
+      <!--<li>Adversity</li> -->
+      <li>Artificial Intelligence (AI)</li>
+      <!--<li>Business</li> -->
+    </ul>
+  </div>
+
+  <!-- Fee -->
+  <div style="flex: 1;">
+    <p><strong>Speaker's Notes</strong></p>
+    <p style="color: #ffb321;">TBD</p>
+  </div>
+</div>
+
+
+<!-- Nitesh Chawla -->
+
+<div style="display: flex; flex-direction: row; background-color: #666; color: white; padding: 20px; margin-bottom: 8px; font-size: 18px; border-radius: 8px;">
+  <!-- Speaker Info -->
+  
+  <img src="./assets/images/niteshchawla.jpg"
+       style="width:140px;height:140px;border-radius:50%;
+              object-fit:cover;object-position: 50% 40%;margin-right:24px;flex-shrink:0;">
+
+  <div style="flex: 2;">
+    <h2 style="color: white; margin-top: 0;">Nitesh Chawla</h2>
+    <p style="color: #bbb;"><em>University of Notre Dame, nchawla@nd.edu</em></p>
+  </div>
+
+  <!-- Speaking Topics and Fee -->
+  <div style="flex: 1;">
+    <p><strong>Speaking Topics</strong></p>
+    <ul style="list-style: none; padding-left: 0; color: #ffb321;">
+      <!--<li>Adversity</li> -->
+      <li>Artificial Intelligence (AI)</li>
+      <!--<li>Business</li> -->
+    </ul>
+  </div>
+
+  <!-- Fee -->
+  <div style="flex: 1;">
+    <p><strong>Speaker's Notes</strong></p>
+    <p style="color: #ffb321;">TBD</p>
+  </div>
+</div>
+
+
+ <!-- Organizing Committee -->
+<hr class="featurette-divider" style="margin: 60px 0;">
+
+<h1 id="organizer" style="text-align: left;">Organizing Committee</h1>
+
+<div class="row text-left" style="margin-top: 30px;">
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/yanjiefu.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Yanjie Fu</h2>
+    <p style="text-align: center;">
+      <i>Arizona State University</i><br>
+      <span style="font-size: smaller;">yanjie.fu@asu.edu</span>
+    </p>
+  </div>
+
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/kunpengliu.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Kunpeng Liu</h2>
+    <p style="text-align: center;">
+      <i>Portland State University</i><br>
+      <span style="font-size: smaller;">kunpeng@pdx.edu</span>
+    </p>
+  </div>
+
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/wangdongjie.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Dongjie Wang</h2>
+    <p style="text-align: center;">
+      <i>University of Kansas</i><br>
+      <span style="font-size: smaller;">wangdongjie@ku.edu</span>
+    </p>
+  </div>
+</div>
+
+
+<div class="row text-left" style="margin-top: 30px;">
+
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/XiangliangZhang.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Xiangliang Zhang</h2>
+    <p style="text-align: center;">
+      <i>University of Notre Dame</i><br>
+      <span style="font-size: smaller;">xzhang33@nd.edu</span>
+    </p>
+  </div>
+
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/khalidosman.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Khalid Osman</h2>
+    <p style="text-align: center;">
+      <i>Stanford University</i><br>
+      <span style="font-size: smaller;">osmank@stanford.edu</span>
+    </p>
+  </div>
+
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/charu.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Charu Aggarwal</h2>
+    <p style="text-align: center;">
+      <i>IBM T.J. Watson Research Center</i><br>
+      <span style="font-size: smaller;">charu@us.ibm.com</span>
+    </p>
+  </div>
+
+</div>
+
+<div class="row text-left" style="margin-top: 30px;">
+ <!-- Organizing Committee
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/suzanneshontz.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Suzanne M. Shontz</h2>
+    <p style="text-align: center;">
+      <i>University of Kansas</i><br>
+      <span style="font-size: smaller;">shontz@ku.edu</span>
+    </p>
+  </div>
+ -->
+
+ <!-- Organizing Committee
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/Huanliu.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Huan Liu</h2>
+    <p style="text-align: center;">
+      <i>Arizona State University</i><br>
+      <span style="font-size: smaller;">huanliu@asu.edu</span>
+    </p>
+  </div>
+-->
+
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/jianpei.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Jian Pei</h2>
+    <p style="text-align: center;">
+      <i>Duke University</i><br>
+      <span style="font-size: smaller;">j.pei@duke.edu</span>
+    </p>
+  </div>
+</div>
+
+
+<hr class="featurette-divider" style="margin: 60px;">
+
+  <h1 id="student_volunteer" style="text-align: left;">Volunteers</h1>
+  <div class="row" style="margin-top: 30px; text-align: center;">
+    <h3></h3>
+    <!-- <div class="col-lg-4" style="margin-top: 30px; margin: 0 auto;">
+      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+        <image xlink:href="./img/zjp.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+      </svg>
+      <h2 class="fw-normal">Jianpeng Zhao</h2>
+      <p><i>University of Macau</i><br><span style="font-size: smaller;">Ph.D Student</span></p>
+    </div>
+  </div> -->
+
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/RuiLiu.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Rui Liu</h2>
+    <p><i>University of Kansas</i><br><span style="font-size: smaller;">Ph.D Student</span></p>
+  </div>
+
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/taozhe.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Tao Zhe</h2>
+    <p><i>University of Kansas</i><br><span style="font-size: smaller;">Ph.D Student</span></p>
+  </div>
+  <!--
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/zhangyunhe.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Yunhe Zhang</h2>
+    <p><i>University of Macau</i><br><span style="font-size: smaller;">Ph.D Student</span></p>
+  </div>
+
+
+  <div class="col-lg-4 d-flex flex-column align-items-center" style="margin-top: 30px;">
+    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      <image xlink:href="./assets/images/xhh.jpg" class="img-fluid img-thumbnail rounded-circle" width="140" height="140" clip-path="circle(70px at 70px 70px)"></image>
+    </svg>
+    <h2 class="fw-normal">Haihua Xu</h2>
+    <p><i>University of Macau</i><br><span style="font-size: smaller;">Ph.D Student</span></p>
+  </div>
+  -->
+
+<!-- FOOTER -->
+<footer class="container mt-5 py-4" style="background-color:#f8f9fa; border-top: 1px solid #dee2e6;">
+<div class="row">
+  <div class="col-md-6">
+    <p class="mb-0">If you have any questions, feel free to send an email to <a href="mailto:kunpeng@pdx.edu">kunpeng@pdx.edu</a></p>
+  </div>
+  <div class="col-md-6 text-end">
+    <a href="https://github.com/ai-for-data-editing/KDD25-workshop/#" class="btn btn-primary btn-sm">Back to top</a>
+  </div>
+</div>
+</footer>
+
+<!-- Clustrmaps Widget -->
+<div id="clustrmaps-widget" class="mt-3 text-center">
+<div style="max-width: 200px; margin: 0 auto;">
+
+  <!--插入访客小地球widget-->
+  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=XyJLUo0W7V-lyDKHTICkEzaujGL2Xn-4EVe8SUF0Jjc"></script>
+</div>
+</div>
+
+<!--<script src="./AI for Urban Planning_files/bootstrap.bundle.min(1).js.download"></script> -->
+<!--<script src="./AI for Urban Planning_files/bootstrap.bundle.min.js.download"></script> -->
+
+<script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+
+
+
+</div></div></div></main><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></body></html>

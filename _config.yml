@@ -1,0 +1,18 @@
+title: "AI for Data Editing"
+description: >-
+  KDD 2025 Workshop on AI for Data Editing
+url: "https://ai-for-data-editing.github.io"
+baseurl: "/KDD25-workshop"
+
+theme: minima
+plugins:
+  - jekyll-seo-tag
+
+
+# 启用SCSS处理
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+# 自定义变量
+primary_color: "#198754"  # Bootstrap绿色
